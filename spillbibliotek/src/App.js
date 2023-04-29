@@ -9,28 +9,31 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="App">
-        <nav className="App-header">
+      <div>
+        {/* Menyen */}
+        <nav>
           <ul>
             <li>
               <Link to="/">Dashboard</Link>
             </li>
             <li>
-              <Link to="/gameshop">GameShop</Link>
+              <Link to="/gameshop">Game Shop</Link>
             </li>
             <li>
               <Link to="/mygames">My Games</Link>
             </li>
             <li>
-              <Link to="/favourites">My Favourites</Link>
+              <Link to="/myfavourites">My Favourites</Link>
             </li>
           </ul>
         </nav>
+
+        {/* Routing */}
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/gameshop" element={<GameShop />} />
           <Route path="/mygames" element={<MyGames />} />
-          <Route path="/favourites" element={<MyFavourites />} />
+          <Route path="/myfavourites" element={<MyFavourites />} />
         </Routes>
       </div>
     </Router>
