@@ -1,0 +1,6 @@
+
+
+
+API Key: 27e0f70c258642ebab90d7b2680c5c4b
+
+API Docs: https://api.rawg.io/docs/
