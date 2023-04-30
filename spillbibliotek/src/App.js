@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Dashboard from './components/Dashboard';
-import GameShop from './components/GameShop';
-import MyGames from './components/MyGames';
-import MyFavourites from './components/MyFavourites';
+import Dashboard from './pages/Dashboard';
+import GameShop from './pages/GameShop';
+import MyGames from './pages/MyGames';
+import MyFavourites from './pages/MyFavourites';
 import './css/main.css'
 
 function App() {

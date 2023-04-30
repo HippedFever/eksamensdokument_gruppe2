@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
 html {
   position: relative;
   min-height: 100%;
@@ -63,11 +64,6 @@ nav {
   padding: 1rem;
 }
 
-nav h1 {
-  font-size: 2rem;
-  margin: 0;
-}
-
 nav ul {
   list-style: none;
   display: flex;
@@ -98,6 +94,11 @@ nav a:hover {
   flex-wrap: wrap;
 }
 
+.GameShop {
+  display: inline;
+  flex: wrap;
+}
+
 .MyGames {
   flex: 2;
   padding: 1rem;
@@ -117,8 +118,8 @@ nav a:hover {
 
 .card {
   position: relative;
-  width: 500px;
-  height: 230px;
+  width: 300px;
+  height: 150px;
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 20px;
