@@ -8,8 +8,7 @@ import Header from "./Header";
 function Dashboard() {
   return (
     <main>
-        <Header />
-
+      <Header />
       <MyFavourites />
       <Footer />
     </main>
