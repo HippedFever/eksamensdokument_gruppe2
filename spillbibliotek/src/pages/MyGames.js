@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import GameCard from "../components/GameCard";
 
 function MyGames() {
@@ -11,7 +10,6 @@ function MyGames() {
 
   return (
     <div>
-      <Navbar />
       <h2>My Games</h2>
       <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}>
         {games.map((game, index) => (
