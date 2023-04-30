@@ -5,6 +5,7 @@ import GameShop from './components/GameShop';
 import MyGames from './components/MyGames';
 import MyFavourites from './components/MyFavourites';
 import './App.css';
+import './css/main.css'
 
 function App() {
   return (
