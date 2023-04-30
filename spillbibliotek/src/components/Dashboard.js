@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import MyFavourites from "./MyFavourites";
 
 function Dashboard() {
   return (
@@ -17,6 +18,8 @@ function Dashboard() {
           <Link to="/myfavourites">Go to favorites</Link>
         </li>
       </ul>
+
+      <MyFavourites />
     </div>
   );
 }

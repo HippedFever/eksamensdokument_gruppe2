@@ -1,13 +1,13 @@
 import React from "react";
 
-function GameCard(props) {
+function GameCard({ title, description, hoverText, buttonText }) {
   return (
     <div className="card">
-      <h2>{props.title}</h2>
-      <p>{props.description}</p>
-      <span>{props.hoverText}</span>
+      <h2>{title}</h2>
+      <p>{description}</p>
+      <span>{hoverText}</span>
       <div className="pic"></div>
-      <button>{props.buttonText}</button>
+      <button>{buttonText}</button>
     </div>
   );
 }
@@ -21,13 +21,7 @@ function MyFavourites() {
   return (
     <div className="container">
       {favourites.map((game, index) => (
-        <GameCard
-          key={index}
-          title={game.title}
-          description={game.description}
-          hoverText={game.hoverText}
-          buttonText={game.buttonText}
-        />
+        <GameCard key={index} {...game} />
       ))}
     </div>
   );

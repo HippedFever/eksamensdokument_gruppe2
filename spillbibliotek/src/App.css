@@ -1,187 +1,117 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+nav {
+  background-color: #1e90ff;
   color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+nav h1 {
+  font-size: 2rem;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+nav a:hover {
+  background-color: #87ceeb;
 }
 
 .container {
-  width: 100%;
-  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.MyGames {
+  flex: 2;
+  padding: 1rem;
+}
+
+.MyFavourites {
+  flex: 1;
+  padding: 1rem;
+}
+
+
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.container .card {
+.card {
   position: relative;
   width: 500px;
   height: 230px;
   padding: 15px;
-  background: linear-gradient(60deg, #151516 0%, #1d2229 100%);
-  overflow: hidden;
   margin-bottom: 15px;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: linear-gradient(60deg, #151516 0%, #1d2229 100%);
 }
 
-.container .card h2 {
-  z-index: 99;
+.card h2, .card p, .card span {
   position: absolute;
-  bottom: 25px;
+  z-index: 99;
   right: 130px;
-  font-size: 50px;
-  font-weight: 700;
-  color: #fff;
-  pointer-events: none;
+  letter-spacing: 1px;
   transition: 0.2s ease;
+  color: #fff;
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-.container .card p {
-  z-index: 99;
-  position: absolute;
-  bottom: 30px;
-  right: 130px;
-  width: 150px;
-  color: #fff;
-  opacity: 0;
-  font-size: 12px;
-  text-align: right;
-  letter-spacing: 1px;
-  transition: 0.2s ease;
+.card h2 {
+  font-size: 50px;
+  font-weight: 700;
+  bottom: 25px;
 }
 
-.container .card span {
-  z-index: 99;
-  position: absolute;
+.card p {
+  width: 150px;
+  font-size: 12px;
+  bottom: 30px;
+  opacity: 0;
+  text-align: right;
+}
+
+.card span {
+  font-size: 12px;
   top: 60px;
   right: 35px;
-  color: #fff;
-  font-size: 12px;
-  letter-spacing: 1px;
+  opacity: 0.7;
   writing-mode: vertical-rl;
-  transition: 0.2s ease;
-  opacity: 0.7;
 }
 
-.container .card .pic {
+.card .pic {
   z-index: 100;
   width: 395px;
   height: 200px;
-  background-image: url(#);
-  background-size: cover;
   border-radius: 12px;
+  background-size: cover;
   filter: grayscale(100%);
   transition: 0.3s ease;
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.container .card {
-  position: relative;
-  width: 500px;
-  height: 230px;
-  padding: 15px;
-  background: linear-gradient(60deg, #151516 0%, #1d2229 100%);
-  overflow: hidden;
-  margin-bottom: 15px;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
-
-.container .card h2 {
-  z-index: 99;
-  position: absolute;
-  bottom: 25px;
-  right: 130px;
-  font-size: 50px;
-  font-weight: 700;
-  color: #fff;
-  pointer-events: none;
-  transition: 0.2s ease;
-  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-.container .card p {
-  z-index: 99;
-  position: absolute;
-  bottom: 30px;
-  right: 130px;
-  width: 150px;
-  color: #fff;
-  opacity: 0;
-  font-size: 12px;
-  text-align: right;
-  letter-spacing: 1px;
-  transition: 0.2s ease;
-}
-
-.container .card span {
-  z-index: 99;
-  position: absolute;
-  top: 60px;
-  right: 35px;
-  color: #fff;
-  font-size: 12px;
-  letter-spacing: 1px;
-  writing-mode: vertical-1r;
-  transition: 0.2s ease;
-  opacity: 0.7;
-}
-
-.container .card .pic {
-  z-index: 100;
-  width: 395px;
-  height: 200px;
   background-image: url(#);
-  background-size: cover;
-  border-radius: 12px;
-  filter: grayscale(100%);
-  transition: 0.3s ease;
 }
 
-.container .card button {
+.card button {
   position: absolute;
   right: 30px;
   bottom: 40px;
@@ -196,36 +126,36 @@
   transition: 0.3s ease;
 }
 
-.container .card:hover button {
-  transform: scale(16.5);
-  opacity: 0.5;
-}
-
-.container .card:hover h2 {
-  bottom: 80px;
-  right: 50px;
-}
-
-.container .card:hover p {
-  opacity: 1;
-  right: 60px;
-}
-
-.container .card:hover span {
-  opacity: 0;
-  top: 80px;
-}
-
-.container .card:hover .pic {
-  filter: grayscale(0);
-  width: 470px;
-}
-
-.container .card2 .pic {
+.card2 .pic {
   background-image: url(#);
   transition: 0.3s ease;
 }
 
-.container .card2 button {
+.card2 button {
   background-color: #26c3a1;
+}
+
+.card:hover button {
+  transform: scale(16.5);
+  opacity: 0.5;
+}
+
+.card:hover h2 {
+  bottom: 80px;
+  right: 50px;
+}
+
+.card:hover p {
+  opacity: 1;
+  right: 60px;
+}
+
+.card:hover span {
+  opacity: 0;
+  top: 80px;
+}
+
+.card:hover .pic {
+  filter: grayscale(0);
+  width: 470px;
 }
