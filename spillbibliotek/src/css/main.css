@@ -1,28 +1,4 @@
-.header-title {
-  font-family: "Vina Sans", sans-serif;
-  font-size: 6rem;
-  font-weight: lighter;
-}
-
-h1 {
-  font-family: "Crimson Pro", serif;
-  font-size: 4rem;
-  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff6600, 0 0 30px #ff8c00, 0 0 40px #ff9933, 0 0 50px #ffcc00, 0 0 60px #ffff00;
-  animation: flicker 1s ease-in-out infinite alternate;
-}
-
-@keyframes flicker {
-  0% {
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff6600, 0 0 30px #ff8c00, 0 0 40px #ff9933, 0 0 50px #ffcc00, 0 0 60px #ffff00;
-  }
-  50% {
-    text-shadow: none;
-  }
-  100% {
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff6600, 0 0 30px #ff8c00, 0 0 40px #ff9933, 0 0 50px #ffcc00, 0 0 60px #ffff00;
-  }
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 html {
   position: relative;
   min-height: 100%;
@@ -36,26 +12,50 @@ body {
 
 main {
   flex: 1;
-  padding-bottom: 8rem;
+  padding-bottom: 10rem;
 }
 
 footer {
-  background: #1e90ff;
+  background: #5e6b78;
   text-align: center;
   color: white;
-  padding: 1rem;
+  padding: 2rem;
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
 }
 
-a {
+footer a:visited {
   color: white;
 }
 
+footer a:hover {
+  background-color: #87ceeb;
+  padding: 0.25rem;
+  border-radius: 5px;
+  color: black;
+}
+
+.header-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 5rem;
+  font-weight: bolder;
+  padding-left: 0rem;
+  padding-bottom: 0.5rem;
+  margin: 1rem;
+  background-image: linear-gradient(45deg, #553c9a, #ee4b2b);
+  color: transparent;
+  background-clip: text;
+}
+
+h1 {
+  font-family: "Crimson Pro", serif;
+  font-size: 4rem;
+}
+
 nav {
-  background-color: #1e90ff;
+  background-color: #5e6b78;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -76,6 +76,8 @@ nav ul {
 
 nav li {
   margin: 0;
+  height: 100%;
+  display: flex;
 }
 
 nav a {
@@ -83,10 +85,12 @@ nav a {
   text-decoration: none;
   font-size: 1.2rem;
   padding: 0.5rem;
+  border-radius: 5px;
 }
 
 nav a:hover {
   background-color: #87ceeb;
+  color: black;
 }
 
 .container {
