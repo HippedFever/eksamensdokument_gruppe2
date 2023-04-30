@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import GameShop from './components/GameShop';
 import MyGames from './components/MyGames';
 import MyFavourites from './components/MyFavourites';
-import './App.css';
+import './css/main.css'
 
 function App() {
   return (
