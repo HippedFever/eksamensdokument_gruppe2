@@ -1,4 +1,6 @@
 import React from "react";
+import Navbar from "../components/Navbar";
+import GameCard from "../components/GameCard";
 
 function MyGames() {
   const games = [
@@ -9,14 +11,13 @@ function MyGames() {
 
   return (
     <div>
+      <Navbar />
       <h2>My Games</h2>
-      <ul>
+      <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}>
         {games.map((game, index) => (
-          <li key={index}>
-            {game.title} ({game.platform})
-          </li>
+          <GameCard key={index} title={game.title} platform={game.platform} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
