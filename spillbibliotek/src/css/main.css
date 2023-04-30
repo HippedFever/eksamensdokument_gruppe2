@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
-
 html {
   position: relative;
   min-height: 100%;
@@ -17,7 +16,7 @@ main {
 }
 
 footer {
-  background: #5e6b78;
+  background: grey;
   text-align: center;
   color: white;
   padding: 2rem;
@@ -32,7 +31,7 @@ footer a:visited {
 }
 
 footer a:hover {
-  background-color: #87ceeb;
+  background-color: lightblue;
   padding: 0.25rem;
   border-radius: 5px;
   color: black;
@@ -51,12 +50,12 @@ footer a:hover {
 }
 
 h1 {
-  font-family: "Crimson Pro", serif;
+  font-family: "Vina Sans", sans-serif;
   font-size: 4rem;
 }
 
 nav {
-  background-color: #5e6b78;
+  background-color: grey;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -85,7 +84,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #87ceeb;
+  background-color: lightblue;
   color: black;
 }
 
