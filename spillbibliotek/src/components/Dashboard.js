@@ -7,11 +7,9 @@ import Footer from "./Footer";
 function Dashboard() {
   return (
     <main>
-        <Header />
-
-        <MyFavourites />
-
-        <Footer />
+      <Header />
+      <MyFavourites />
+      <Footer />
     </main>
   );
 }
