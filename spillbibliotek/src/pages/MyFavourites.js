@@ -12,7 +12,7 @@ function MyFavourites() {
     <div>
       <h2>My Favourites</h2>
       <div className="container">
-        {favourites.slice(0, 2).map((game, index) => (
+        {favourites.slice(0, 3).map((game, index) => (
           <GameCard key={index} {...game} />
         ))}
       </div>
