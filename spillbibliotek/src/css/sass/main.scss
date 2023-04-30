@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 $blue: #1e90ff;
+$lightblue: #87ceeb;
 $white: white;
+$grey: #5e6b78;
 
 html {
   position: relative;
@@ -14,14 +18,14 @@ body {
 
 main {
   flex: 1;
-  padding-bottom: 8rem;
+  padding-bottom: 10rem;
 }
 
 footer {
-  background: $blue;
+  background: $grey;
   text-align: center;
   color: $white;
-  padding: 1rem;
+  padding: 2rem;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -29,35 +33,37 @@ footer {
   
 }
 
-.header-title {
-  font-family: 'Vina Sans', sans-serif;
-  font-size: 6rem;
-  font-weight: lighter;
+footer a:visited {
+  color: $white;
+}
 
+footer a:hover {
+  background-color: $lightblue;
+  padding: .25rem;
+  border-radius: 5px;
+  color: black;
+}
+
+.header-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 5rem;
+  font-weight: bolder;
+  padding-left: 0rem;
+  padding-bottom: 0.5rem;
+  margin: 1rem;
+  background-image: linear-gradient(45deg, #553c9a, #ee4b2b);
+  color: transparent;
+  background-clip: text;
 }
 
 h1 {
   font-family: 'Vina Sans', sans-serif;
   font-size: 4rem;
-  font-weight: lighter;
-  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff6600, 0 0 30px #ff8c00, 0 0 40px #ff9933, 0 0 50px #ffcc00, 0 0 60px #ffff00;
-  animation: flicker 3s ease-in-out infinite alternate;
 }
 
-@keyframes flicker {
-  0% {
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff6600, 0 0 30px #ff8c00, 0 0 40px #ff9933, 0 0 50px #ffcc00, 0 0 60px #ffff00;
-  }
-  50% {
-    text-shadow: none;
-  }
-  100% {
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff6600, 0 0 30px #ff8c00, 0 0 40px #ff9933, 0 0 50px #ffcc00, 0 0 60px #ffff00;
-  }
-}
 
 nav {
-background-color: #5e6b78;
+background-color: $grey;
 color: white;
 display: flex;
 justify-content: space-between;
@@ -73,6 +79,8 @@ gap: 1rem;
 
 nav li {
 margin: 0;
+height: 100%;
+display: flex;
 }
 
 nav a {
@@ -80,10 +88,12 @@ color: white;
 text-decoration: none;
 font-size: 1.2rem;
 padding: 0.5rem;
+border-radius: 5px;
 }
 
 nav a:hover {
-background-color: #87ceeb;
+background-color: $lightblue;
+color: black;
 }
 
 .container {
