@@ -1,23 +1,25 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
+import MyFavourites from "./MyFavourites";
 
 function Dashboard() {
   return (
     <div>
       <h1>Dashboard</h1>
-      <div className="dashboard-sections">
-        <div className="dashboard-section">
-          <h2>Gameshop</h2>
-          <p>Content for Gameshop section</p>
-        </div>
-        <div className="dashboard-section">
-          <h2>My Games</h2>
-          <p>Content for My Games section</p>
-        </div>
-        <div className="dashboard-section">
-          <h2>My Favourites</h2>
-          <p>Content for My Favourites section</p>
-        </div>
-      </div>
+      <p>Vennligst velg en av følgende:</p>
+      <ul>
+        <li>
+          <Link to="/gameshop">Visit Shop</Link>
+        </li>
+        <li>
+          <Link to="/mygames">Go to library</Link>
+        </li>
+        <li>
+          <Link to="/myfavourites">Go to favorites</Link>
+        </li>
+      </ul>
+
+      <MyFavourites />
     </div>
   );
 }
