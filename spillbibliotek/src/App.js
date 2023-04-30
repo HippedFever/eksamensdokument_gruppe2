@@ -10,23 +10,7 @@ function App() {
   return (
     <Router>
       <div>
-        {/* Menyen */}
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Dashboard</Link>
-            </li>
-            <li>
-              <Link to="/gameshop">Game Shop</Link>
-            </li>
-            <li>
-              <Link to="/mygames">My Games</Link>
-            </li>
-            <li>
-              <Link to="/myfavourites">My Favourites</Link>
-            </li>
-          </ul>
-        </nav>
+ 
 
         {/* Routing */}
         <Routes>
