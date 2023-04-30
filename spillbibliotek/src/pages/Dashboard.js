@@ -1,4 +1,5 @@
 import React from "react";
+import { Switch, Route } from 'react-router-dom';
 import Header from "../components/Header";
 import GameShop from "./GameShop";
 import MyGames from "./MyGames";
@@ -9,9 +10,11 @@ function Dashboard() {
   return (
     <main>
       <Header />
-      <GameShop />
-      <MyGames />
-      <MyFavourites />
+      <Switch>
+        <Route path="/gameshop" component={GameShop} />
+        <Route path="/mygames" component={MyGames} />
+        <Route path="/myfavourites" component={MyFavourites} />
+      </Switch>
       <Footer />
     </main>
   );
