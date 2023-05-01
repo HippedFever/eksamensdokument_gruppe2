@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "../components/Header";
-import MyGamesSection from "./MyGamesSection";
+import MyGames from "./MyGames";
 import Footer from "../components/Footer";
 
-function MyGames() {
+// function MyGames() {
   return (
     <main>
       <Header />
-      <MyGamesSection />
+      <MyGames />
       <Footer />
     </main>
   );
