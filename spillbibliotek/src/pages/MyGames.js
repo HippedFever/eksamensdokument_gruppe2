@@ -1,5 +1,7 @@
 import React from "react";
-import GameCard from "../components/GameCard";
+import Footer from "../components/Footer";
+import Library from "../components/Library";
+import Header from "../components/Header";
 
 function MyGames() {
   const games = [
@@ -9,14 +11,11 @@ function MyGames() {
   ];
 
   return (
-    <div>
-      <h2>My Games</h2>
-      <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}>
-        {games.map((game, index) => (
-          <GameCard key={index} title={game.title} platform={game.platform} />
-        ))}
-      </div>
-    </div>
+    <main>
+      <Header />
+      <Library />
+      <Footer />
+    </main>
   );
 }
 
