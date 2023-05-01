@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import GameCard from "../components/GameCard";
 
 function GameShop() {
@@ -27,8 +28,13 @@ function GameShop() {
   ];
 
   return (
-    <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <h2>Game Shop</h2>
+      <Link to="/gameshop">
+        <button style={{ marginTop: "1rem", padding: "0.5rem 1rem", borderRadius: "5px", backgroundColor: "blue", color: "white", fontWeight: "bold", border: "none" }}>
+          Visit Shop
+        </button>
+      </Link>
       <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
         {games.map((game, index) => (
           <GameCard key={index} title={game.title} platform={game.platform} price={game.price} purchaseLink={game.purchaseLink} imageUrl={game.imageUrl} />
