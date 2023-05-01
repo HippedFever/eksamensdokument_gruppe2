@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
-
 html {
   position: relative;
   min-height: 100%;
@@ -51,7 +50,7 @@ footer a:hover {
 }
 
 h1 {
-  font-family: "Crimson Pro", serif;
+  font-family: "Vina Sans", sans-serif;
   font-size: 4rem;
 }
 
