@@ -7,15 +7,19 @@ $white: #FFFFFF;
 $grey: #CCCCCC;
 $black: #222222;
 
+
+
 html {
   position: relative;
   min-height: 100%;
+  background-color: $white;
 }
 
 body {
   margin: 1rem;
   display: flex;
   flex-direction: column;
+
 }
 
 main {
