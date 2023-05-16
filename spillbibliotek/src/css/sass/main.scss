@@ -9,6 +9,7 @@ $black: #222222;
 
 
 
+
 html {
   position: relative;
   min-height: 100%;
@@ -19,14 +20,15 @@ body {
   margin: 1rem;
   display: flex;
   flex-direction: column;
-
 }
 
 main {
   background: $grey;
   flex: 1;
   border-radius: 20px;
+  height: 100%;
 }
+
 
 footer {
   background: linear-gradient(90deg, #151516 0%, #1d2229 100%);

@@ -16,6 +16,9 @@ function Navbar() {
         <li>
           <Link to="/myfavourites">Go to favorites</Link>
         </li>
+        <li>
+          <Link to="/REMOVE">TO BE REMOVED</Link>
+        </li>
       </ul>
     </nav>
   );
