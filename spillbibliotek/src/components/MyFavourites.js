@@ -1,22 +1,35 @@
-import React from "react";
-import GameCard from "./GameCard";
+import React, { useState } from 'react';
 
 function MyFavourites() {
-const favourites = [
-{ title: "Game 1", platform: "PC" },
-{ title: "Game 3", platform: "Xbox" },
-];
+  const [favourites, setFavourites] = useState([]);
 
-return (
-<div>
-<h2>My Favourites</h2>
-<div className="game-container">
-{favourites.map((game, index) => (
-<GameCard key={index} title={game.title} platform={game.platform} />
-))}
-</div>
-</div>
-);
+  const addToFavourites = (game) => {
+    setFavourites([...favourites, game]);
+  };
+
+  return (
+    <div>
+      <h2>My Favourites</h2>
+      <div className="game-container">
+        <GameCard title="Game 1" platform="PC" addToFavourites={addToFavourites} />
+        <GameCard title="Game 3" platform="Xbox" addToFavourites={addToFavourites} />
+      </div>
+      <h2>Favorittspill:</h2>
+      {favourites.map((game, index) => (
+        <p key={index}>{game}</p>
+      ))}
+    </div>
+  );
+}
+
+function GameCard({ title, platform, addToFavourites }) {
+  return (
+    <div>
+      <h1>{title}</h1>
+      <p>{platform}</p>
+      <button onClick={() => addToFavourites(title)}>Legg til favoritter</button>
+    </div>
+  );
 }
 
 export default MyFavourites;
