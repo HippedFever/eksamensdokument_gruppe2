@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import GameCard from "../components/GameCard";
+import GameCard from "./GameCard";
 
 const games = [
   {

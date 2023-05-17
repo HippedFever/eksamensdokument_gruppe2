@@ -57,7 +57,7 @@ function GameShop() {
             ) : (
               <h2>Popular Games</h2>
             )}
-            <ul> 
+            <section style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}>
               {filteredGames.map((game) => {
                 console.log(game); //Returnerer alle spillene i konsoll
                 return (
@@ -71,7 +71,7 @@ function GameShop() {
                   />
                 );
               })}
-            </ul>
+            </section>
           </>
         )}
       </div>

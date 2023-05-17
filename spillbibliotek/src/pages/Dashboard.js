@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Library from "../components/Library";
 import Favourites from "../components/Favourites";
-import GameShopComp from "../components/GameShopComp"
+import GameShopComp from "../components/GameShopFront"
 
 function Dashboard() {
   return (

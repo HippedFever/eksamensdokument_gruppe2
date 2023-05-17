@@ -140,7 +140,7 @@ nav a:hover::before {
 .card h2, .card p, .card span {
   position: absolute;
   z-index: 99;
-  right: 130px;
+  right: 120px;
   letter-spacing: 1px;
   transition: 0.2s ease;
   color: #FF8C42;
@@ -175,7 +175,6 @@ nav a:hover::before {
   height: 200px;
   border-radius: 12px;
   background-size: cover;
-  filter: grayscale(100%);
   transition: 0.3s ease;
   background-image: url(#);
 }
@@ -210,8 +209,8 @@ nav a:hover::before {
 }
 
 .card:hover h2 {
-  bottom: 80px;
-  right: 50px;
+  bottom: 400px;
+  right: 400px;
 }
 
 .card:hover p {
@@ -225,7 +224,7 @@ nav a:hover::before {
 }
 
 .card:hover .pic {
-  filter: grayscale(0);
+  filter: grayscale(1);
   width: 470px;
 }
 
