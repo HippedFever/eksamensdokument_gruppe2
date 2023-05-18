@@ -1,16 +1,19 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import Header from "../components/Header";
-import MyGames from "./MyGames";
+import GameDetails from "../components/GameDetails";
 import Footer from "../components/Footer";
 
- function MyGames() {
+function GamePage() {
+  const { gameId } = useParams();
+
   return (
     <main>
       <Header />
-      <MyGames />
+      <GameDetails gameId={gameId} />
       <Footer />
     </main>
   );
 }
 
-export default MyGames;
+export default GamePage;
