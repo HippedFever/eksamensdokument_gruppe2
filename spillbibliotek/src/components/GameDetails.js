@@ -29,7 +29,7 @@ function GameDetails({ gameId }) {
 
   const {
     name,
-    description,
+    description_raw,
     released,
     background_image,
     website,
@@ -41,7 +41,7 @@ function GameDetails({ gameId }) {
     <main>
       <div>
         <h2>{name}</h2>
-        <p>{description}</p>
+        <p>{description_raw}</p>
         <p>Released: {released}</p>
         <img src={background_image} alt={name} />
         <p>Website: <a href={website}>{website}</a></p>
