@@ -7,9 +7,6 @@ $white: #FFFFFF;
 $grey: #CCCCCC;
 $black: #222222;
 
-
-
-
 html {
   position: relative;
   min-height: 100%;
@@ -22,15 +19,14 @@ body {
   flex-direction: column;
 }
 
-main {
+.main {
   background: $grey;
   flex: 1;
   border-radius: 20px;
   height: 100%;
 }
 
-
-footer {
+.footer {
   background: linear-gradient(90deg, #151516 0%, #1d2229 100%);
   text-align: center;
   color: $white;
@@ -40,15 +36,15 @@ footer {
   border-radius: 0 0 20px 20px;
 }
 
-footer a:visited {
+.footer a:visited {
   color: $white;
 }
 
-footer a:hover {
+.footer a:hover {
   background-color: $lightblue;
   padding: .25rem;
   border-radius: 5px;
-  color: black;
+  color: $black;
 }
 
 .header-title {
@@ -62,25 +58,25 @@ footer a:hover {
 }
 
 nav {
-background: linear-gradient(90deg, #151516 0%, #1d2229 100%);
-border-radius: 20px 20px 0 0;
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-bottom: 3rem;
+  background: linear-gradient(90deg, #151516 0%, #1d2229 100%);
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
 }
 
 nav ul {
-list-style: none;
-display: flex;
-gap: 1rem;
-margin-right: 1rem;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-right: 1rem;
 }
 
 nav li {
-margin: 0;
-height: 100%;
-display: flex;
+  margin: 0;
+  height: 100%;
+  display: flex;
 }
 
 nav a {
@@ -116,127 +112,125 @@ nav a:hover::before {
 }
 
 .container {
-display: flex;
-flex-wrap: wrap;
-}
-
-.MyGames {
-flex: 2;
-padding: 1rem;
-}
-
-.MyFavourites {
-flex: 1;
-padding: 1rem;
-}
-
-
-.container {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card {
-position: relative;
-width: 300px;
-height: 150px;
-padding: 15px;
-margin: 15px;
-border-radius: 20px;
-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-overflow: hidden;
-background: linear-gradient(90deg, #151516 0%, #1d2229 100%);
+  position: relative;
+  width: 300px;
+  height: 150px;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background: linear-gradient(90deg, #151516 0%, #1d2229 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: background-size 0.5s ease;
 }
 
-.card h2, .card p, .card span {
-position: absolute;
-z-index: 99;
-right: 120px;
-letter-spacing: 1px;
-transition: 0.2s ease;
-color: $orange;
-text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+.card .heart-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  fill: $orange;
+  cursor: pointer;
+}
+
+.card h2,
+.card p,
+.card span {
+  position: absolute;
+  max-width: 50%;
+  left: 20px;
+  transition: 0.5s ease;
+  color: $orange;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .card h2 {
-font-size: 50px;
-font-weight: 700;
-bottom: 25px;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0px;
+  left: 25px;
+  color: $orange;
+  text-shadow:
+    -1px -1px 0 $black,
+    1px -1px 0 $black,
+    -1px 1px 0 $black,
+    1px 1px 0 $black;
 }
 
 .card p {
-width: 150px;
-font-size: 12px;
-bottom: 30px;
-opacity: 0;
-text-align: right;
+  width: 150px;
+  font-size: 12px;
+  bottom: 30px;
+  opacity: 0;
+  text-align: left;
 }
 
 .card span {
-font-size: 12px;
-top: 60px;
-right: 35px;
-opacity: 0.7;
-writing-mode: vertical-rl;
+  font-size: 12px;
+  top: 60px;
+  right: 35px;
+  opacity: 0.7;
+  writing-mode: vertical-rl;
 }
 
 .card .pic {
-z-index: 100;
-width: 300px;
-height: 150px;
-border-radius: 12px;
-background-size: cover;
-transition: 0.3s ease;
-background-image: url(#);
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-size: cover;
+  transition: 0.5s ease;
+  background-image: url(#);
 }
 
 .card button {
-position: absolute;
-right: 30px;
-bottom: 40px;
-width: 30px;
-height: 30px;
-background-color: $purple;
-border: none;
-border-radius: 30px;
-cursor: pointer;
-outline: none;
-opacity: 1;
-transition: 0.3s ease;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  opacity: 1;
+  transition: 0.5s ease;
 }
 
-.card2 .pic {
-background-image: url(#);
-transition: 0.3s ease;
-}
-
-.card2 button {
-background-color: #26c3a1;
+.card button::before {
+  content: '\2764';
+  font-size: 24px;
+  color: $orange;
 }
 
 .card:hover button {
-transform: scale(16.5);
-opacity: 0.5;
-}
-
-.card:hover h2 {
-bottom: 400px;
-right: 400px;
+  transform: scale(1.2);
+  opacity: 0.8;
 }
 
 .card:hover p {
-opacity: 1;
-right: 60px;
+  opacity: 1;
+  left: 25px;
 }
 
 .card:hover span {
-opacity: 0;
-top: 80px;
+  opacity: 0;
+  top: 80px;
 }
 
 .card:hover .pic {
-filter: grayscale(1);
-width: 470px;
+  width: auto;
+  background-position: center;
+  background-size: 150%;
+  transition: 0.5s ease;
 }
