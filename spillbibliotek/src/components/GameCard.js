@@ -7,9 +7,15 @@ function GameCard({ title, description, hoverText, backgroundImage, onButtonClic
     event.stopPropagation();
   };
 
+  const handleButtonClick = () => {
+    if (typeof onButtonClick === "function") {
+      onButtonClick();
+    }
+  };
+
   return (
-    <article className="card">
-      <Heart />
+    <article className="card" onClick={handleButtonClick}>
+      <Heart onClick={handleHeartClick} />
       <div className="image-container">
         <div className="pic" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
       </div>
@@ -17,7 +23,7 @@ function GameCard({ title, description, hoverText, backgroundImage, onButtonClic
         <h2>{title}</h2>
         <p>{description}</p>
         <div className="hover-text">{hoverText}</div>
-        <BuyButton buttonText="BUY" onButtonClick={onButtonClick} />
+        <BuyButton buttonText="BUY" onButtonClick={handleButtonClick} />
       </div>
     </article>
   );
