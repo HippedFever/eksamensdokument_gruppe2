@@ -30,17 +30,17 @@ function GameStore() {
         Go to Game Shop
       </Link>
       <section style={{ display: "flex", flexDirection: "row" }}>
-        {games.map((game) => (
-          <GameCard
-            key={game.id}
-            title={game.name}
-            description={game.description}
-            hoverText={game.hoverText}
-            buttonText={game.buttonText}
-            backgroundImage={game.background_image}
-          />
-        ))}
-      </section>
+  {games.slice(0, 3).map((game) => (
+    <GameCard
+      key={game.id}
+      title={game.name}
+      description={game.description}
+      hoverText={game.hoverText}
+      buttonText={game.buttonText}
+      backgroundImage={game.background_image}
+    />
+  ))}
+</section>
     </div>
   );
 }

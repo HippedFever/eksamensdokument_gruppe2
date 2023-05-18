@@ -1,4 +1,3 @@
-// Library.js
 import React from "react";
 import GameCard from "../components/GameCard";
 import { Link } from "react-router-dom";
@@ -8,7 +7,7 @@ function Library() {
     { title: "Game 1", description: "Description 1", hoverText: "Hover text 1", backgroundImage: "url-to-image-1", platform: "PC" },
     { title: "Game 2", description: "Description 2", hoverText: "Hover text 2", backgroundImage: "url-to-image-2", platform: "PlayStation" },
     { title: "Game 3", description: "Description 3", hoverText: "Hover text 3", backgroundImage: "url-to-image-3", platform: "Xbox" },
-    { title: "Game 3", description: "Description 3", hoverText: "Hover text 3", backgroundImage: "url-to-image-3", platform: "Xbox" },
+    { title: "Game 4", description: "Description 4", hoverText: "Hover text 4", backgroundImage: "url-to-image-4", platform: "Xbox" },
   ];
 
   const handleButtonClick = (title) => {
@@ -18,7 +17,7 @@ function Library() {
   return (
     <div>
       <h2>My Games</h2>
-      <section style={{ display: "flex", flexDirection: "column" }}>
+      <section style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
         {games.map((game, index) => (
           <GameCard
             key={index}
