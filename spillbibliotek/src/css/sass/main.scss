@@ -132,111 +132,114 @@ padding: 1rem;
 
 
 .container {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card {
-position: relative;
-width: 300px;
-height: 150px;
-padding: 15px;
-margin: 15px;
-border-radius: 20px;
-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-overflow: hidden;
-background: linear-gradient(90deg, #151516 0%, #1d2229 100%);
+  position: relative;
+  width: 300px;
+  height: 150px;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background: linear-gradient(90deg, #151516 0%, #1d2229 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: background-size 0.3s ease;
 }
 
-.card h2, .card p, .card span {
-position: absolute;
-z-index: 99;
-right: 120px;
-letter-spacing: 1px;
-transition: 0.2s ease;
-color: $orange;
-text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+.card h2,
+.card p,
+.card span {
+  position: absolute;
+  z-index: 99;
+  left: 25px; /* Updated to align left */
+  letter-spacing: 1px;
+  transition: 0.2s ease;
+  color: $orange;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .card h2 {
-font-size: 50px;
-font-weight: 700;
-bottom: 25px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  bottom: 25px;
+  text-align: left; /* Updated to align left */
 }
 
 .card p {
-width: 150px;
-font-size: 12px;
-bottom: 30px;
-opacity: 0;
-text-align: right;
+  width: 150px;
+  font-size: 12px;
+  bottom: 30px;
+  opacity: 0;
+  text-align: left; /* Updated to align left */
 }
 
 .card span {
-font-size: 12px;
-top: 60px;
-right: 35px;
-opacity: 0.7;
-writing-mode: vertical-rl;
+  font-size: 12px;
+  top: 60px;
+  right: 35px;
+  opacity: 0.7;
+  writing-mode: vertical-rl;
 }
 
 .card .pic {
-z-index: 100;
-width: 300px;
-height: 150px;
-border-radius: 12px;
-background-size: cover;
-transition: 0.3s ease;
-background-image: url(#);
+  z-index: 100;
+  width: 300px;
+  height: 150px;
+  border-radius: 12px;
+  background-size: cover;
+  transition: 0.3s ease;
+  background-image: url(#);
 }
 
 .card button {
-position: absolute;
-right: 30px;
-bottom: 40px;
-width: 30px;
-height: 30px;
-background-color: $purple;
-border: none;
-border-radius: 30px;
-cursor: pointer;
-outline: none;
-opacity: 1;
-transition: 0.3s ease;
-}
-
-.card2 .pic {
-background-image: url(#);
-transition: 0.3s ease;
-}
-
-.card2 button {
-background-color: #26c3a1;
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+  width: 30px;
+  height: 30px;
+  background-color: $purple;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  opacity: 1;
+  transition: 0.3s ease;
 }
 
 .card:hover button {
-transform: scale(16.5);
-opacity: 0.5;
+  transform: scale(5);
+  opacity: 0.5;
 }
 
 .card:hover h2 {
-bottom: 400px;
-right: 400px;
+  text-align: left; /* Updated to align left */
+  bottom: 25px;
+  left: 25px; /* Updated to align left */
 }
 
 .card:hover p {
-opacity: 1;
-right: 60px;
+  opacity: 1;
+  left: 25px; /* Updated to align left */
 }
 
 .card:hover span {
-opacity: 0;
-top: 80px;
+  opacity: 0;
+  top: 80px;
 }
 
 .card:hover .pic {
-filter: grayscale(1);
-width: 470px;
+  width: 450px;
+  background-size: 125%;
+}
+
+.card:hover {
+  background-size: 125%; /* Zoom in by 25% when hovered */
 }
