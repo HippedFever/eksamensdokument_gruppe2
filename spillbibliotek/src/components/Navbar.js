@@ -1,10 +1,13 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const [isCartOpen, setCartOpen] = useState(false);
+
   return (
     <nav>
       <Link to="/">
-      <h1 className="header-title">The Game Vault</h1>
+        <h1 className="header-title">The Game Vault</h1>
       </Link>
       <ul>
         <li>
@@ -17,7 +20,9 @@ function Navbar() {
           <Link to="/myfavourites">Go to favorites</Link>
         </li>
         <li>
-          <Link to="/REMOVE">TO BE REMOVED</Link>
+          <Link to="#" onClick={() => setCartOpen(true)}>
+            Cart
+          </Link>
         </li>
       </ul>
     </nav>

@@ -138,26 +138,27 @@ nav a:hover::before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
-  transition: background-size 0.3s ease;
+  transition: background-size 0.5s ease;
 }
 
 .card h2,
 .card p,
 .card span {
   position: absolute;
-  z-index: 99;
-  left: 25px; /* Updated to align left */
-  letter-spacing: 1px;
-  transition: 0.2s ease;
+  max-width: 50%;
+  left: 20px;
+  transition: 0.5s ease;
   color: #FF8C42;
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .card h2 {
   font-size: 1.5rem;
-  font-weight: 700;
-  bottom: 25px;
-  text-align: left; /* Updated to align left */
+  position: absolute;
+  top: 0px;
+  left: 25px;
+  color: #FF8C42;
+  text-shadow: -1px -1px 0 #222222, 1px -1px 0 #222222, -1px 1px 0 #222222, 1px 1px 0 #222222;
 }
 
 .card p {
@@ -165,7 +166,7 @@ nav a:hover::before {
   font-size: 12px;
   bottom: 30px;
   opacity: 0;
-  text-align: left; /* Updated to align left */
+  text-align: left;
 }
 
 .card span {
@@ -177,19 +178,18 @@ nav a:hover::before {
 }
 
 .card .pic {
-  z-index: 100;
   width: 300px;
   height: 150px;
   border-radius: 12px;
   background-size: cover;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
   background-image: url(#);
 }
 
 .card button {
   position: absolute;
   right: 30px;
-  bottom: 40px;
+  bottom: 30px;
   width: 30px;
   height: 30px;
   background-color: #6B3FA0;
@@ -198,23 +198,17 @@ nav a:hover::before {
   cursor: pointer;
   outline: none;
   opacity: 1;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
 }
 
 .card:hover button {
-  transform: scale(5);
+  transform: scale(4);
   opacity: 0.5;
-}
-
-.card:hover h2 {
-  text-align: left; /* Updated to align left */
-  bottom: 25px;
-  left: 25px; /* Updated to align left */
 }
 
 .card:hover p {
   opacity: 1;
-  left: 25px; /* Updated to align left */
+  left: 25px;
 }
 
 .card:hover span {
@@ -223,12 +217,10 @@ nav a:hover::before {
 }
 
 .card:hover .pic {
-  width: 450px;
-  background-size: 125%;
-}
-
-.card:hover {
-  background-size: 125%; /* Zoom in by 25% when hovered */
+  width: auto;
+  background-position: center;
+  background-size: 150%;
+  transition: 0.5s ease;
 }
 
 /*# sourceMappingURL=main.css.map */
