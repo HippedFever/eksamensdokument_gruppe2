@@ -12,14 +12,14 @@ body {
   flex-direction: column;
 }
 
-.main {
+main {
   background: #CCCCCC;
   flex: 1;
   border-radius: 20px;
   height: 100%;
 }
 
-.footer {
+footer {
   background: linear-gradient(90deg, #151516 0%, #1d2229 100%);
   text-align: center;
   color: #FFFFFF;
