@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import GameCard from "./GameCard";
 import { Link } from "react-router-dom";
 
+import GameCard from "../components/GameCard";
+
+
 function GameStore() {
   const [games, setGames] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -10,7 +13,6 @@ function GameStore() {
     async function fetchGames() {
       try {
         const url = `https://api.rawg.io/api/games?key=27e0f70c258642ebab90d7b2680c5c4b&dates=2023-01-01,2023-12-31&metacritic=70,100&ordering=-metacritic&page_size=5`;
-
         const response = await fetch(url);
         const data = await response.json();
         setGames(data.results);
@@ -19,10 +21,10 @@ function GameStore() {
         console.error(error);
       }
     }
-
     fetchGames();
   }, []);
 
+ 
   return (
     <div>
       <h2>Game Shop - Top Games Right Now!</h2>
@@ -44,5 +46,6 @@ function GameStore() {
     </div>
   );
 }
+
 
 export default GameStore;
