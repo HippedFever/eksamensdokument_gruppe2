@@ -47,7 +47,7 @@ function GameShop() {
         ) : (
           <>
             <h2>{searchGame ? "Search Results" : "Popular Games"}</h2>
-            <section>
+            <section style={{ display: "flex", flexDirection: "wrap" }}>
               {filteredGames.map((game) => (
                 <GameCard
                   key={game.id}

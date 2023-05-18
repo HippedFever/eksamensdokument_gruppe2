@@ -13,10 +13,10 @@ function Dashboard() {
       <section className="unit1">
         <GameShopComp />
       </section>
-      <section className="unit2">
+      <section style={{ textAlign: "left" }}>
         <Library />
       </section>
-      <section className="unit3">
+      <section style={{ textAlign: "right" }}>
         <Favourites />
       </section>
       <Footer />
