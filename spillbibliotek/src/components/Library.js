@@ -32,6 +32,7 @@ function Library() {
         {games.map((game, index) => (
           <GameCard
             key={index}
+            gameId={game.id}
             title={game.name}
             hoverText={game.hoverText}
             backgroundImage={game.background_image}
