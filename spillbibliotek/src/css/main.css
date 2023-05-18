@@ -190,7 +190,7 @@ nav a:hover::before {
   background-image: url(#);
 }
 
-.card button {
+.card .buyButton {
   position: absolute;
   left: 15px;
   top: 15px;
@@ -204,13 +204,13 @@ nav a:hover::before {
   transition: 0.5s ease;
 }
 
-.card button::before {
+.card .buyButton::before {
   content: "🛒";
   font-size: 24px;
   color: #FF8C42;
 }
 
-.card:hover button {
+.card:hover .buyButton {
   transform: scale(1.2);
   opacity: 0.8;
 }
@@ -247,6 +247,45 @@ nav a:hover::before {
 
 .card:hover h2 {
   font-size: 1rem;
+}
+
+.card .readButton {
+  opacity: 0%;
+  border-radius: 12px;
+  color: #FF8C42;
+  transition: opacity 0.3s ease;
+}
+
+.card .readButton {
+  opacity: 0;
+  margin-top: 7rem;
+  border-radius: 12px;
+  color: #FF8C42;
+  transition: opacity 0.3s ease;
+  transform: translateX(-100%);
+}
+
+.card:hover .readButton {
+  margin-top: 7rem;
+  margin-left: 1rem;
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+@keyframes glideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.detailIMG {
+  max-width: 100%;
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
