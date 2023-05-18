@@ -208,7 +208,7 @@ nav a:hover::before {
 }
 
 .card button::before {
-  content: '\2764';
+  content: '\1F6D2';
   font-size: 24px;
   color: $orange;
 }
@@ -233,4 +233,29 @@ nav a:hover::before {
   background-position: center;
   background-size: 150%;
   transition: 0.5s ease;
+}
+
+.buyButton {
+  padding-left: 16.5rem;
+  color: $orange;
+  text-shadow:
+  -1px -1px 0 $black,
+  1px -1px 0 $black,
+  -1px 1px 0 $black,
+  1px 1px 0 $black;
+}
+
+.card:hover .buyButton {
+  padding-left: 15rem;
+  padding-top: 5rem;
+  color: $orange;
+  text-shadow:
+  -1px -1px 0 $black,
+  1px -1px 0 $black,
+  -1px 1px 0 $black,
+  1px 1px 0 $black;
+}
+
+.card:hover h2 {
+  font-size: 1rem;
 }
