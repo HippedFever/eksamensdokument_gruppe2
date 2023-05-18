@@ -10,13 +10,13 @@ function Dashboard() {
   return (
     <main>
       <Header />
-      <section>
+      <section className="unit1">
         <GameShopComp />
       </section>
-      <section>
+      <section className="unit2">
         <Library />
       </section>
-      <section>
+      <section className="unit3">
         <Favourites />
       </section>
       <Footer />

@@ -32,7 +32,12 @@ function GameStore() {
 
   return (
     <div>
-      <h2>Game Shop</h2>
+      <h2>
+        Game Shop - Top Games Right Now! -
+        <Link to="/gameshop" className="btn">
+          Go to Game Shop
+        </Link>
+      </h2>
       <section>
         {filteredGames.slice(0, 3).map((game, index) => (
           <GameCard
