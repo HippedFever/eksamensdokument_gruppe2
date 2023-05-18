@@ -19,11 +19,6 @@ function Navbar() {
         <li>
           <Link to="/myfavourites">Go to favorites</Link>
         </li>
-        <li>
-          <Link to="#" onClick={() => setCartOpen(true)}>
-            Cart
-          </Link>
-        </li>
       </ul>
     </nav>
   );

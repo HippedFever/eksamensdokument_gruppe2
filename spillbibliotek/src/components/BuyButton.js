@@ -6,7 +6,7 @@ function BuyButton({ buttonText, onButtonClick }) {
   };
 
   return (
-    <button onClick={handleButtonClick}>{buttonText}</button>
+    <button className="buyButton" onClick={handleButtonClick}>{buttonText}</button>
   );
 }
 
