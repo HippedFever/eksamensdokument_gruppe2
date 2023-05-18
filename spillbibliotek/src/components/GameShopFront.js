@@ -26,21 +26,21 @@ function GameStore() {
   return (
     <div>
       <h2>Game Shop - Top Games Right Now!</h2>
-      <section>
-        {games.map((game) => (
-          <GameCard
-            key={game.id}
-            title={game.name}
-            description={game.description}
-            hoverText={game.hoverText}
-            buttonText={game.buttonText}
-            backgroundImage={game.background_image}
-          />
-        ))}
-      </section>
       <Link to="/gameshop" className="btn">
         Go to Game Shop
       </Link>
+      <section style={{ display: "flex", flexDirection: "row" }}>
+  {games.slice(0, 3).map((game) => (
+    <GameCard
+      key={game.id}
+      title={game.name}
+      description={game.description}
+      hoverText={game.hoverText}
+      buttonText={game.buttonText}
+      backgroundImage={game.background_image}
+    />
+  ))}
+</section>
     </div>
   );
 }

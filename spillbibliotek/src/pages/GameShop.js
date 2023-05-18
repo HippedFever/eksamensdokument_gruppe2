@@ -47,18 +47,19 @@ function GameShop() {
         ) : (
           <>
             <h2>{searchGame ? "Search Results" : "Popular Games"}</h2>
-            <section>
-              {filteredGames.map((game) => (
-                <GameCard
-                  key={game.id}
-                  title={game.name}
-                  description={game.description}
-                  hoverText={game.hoverText}
-                  buttonText={game.buttonText}
-                  backgroundImage={game.background_image}
-                />
-              ))}
-            </section>
+            <section style={{ display: "flex", flexWrap: "wrap" }}>
+  {filteredGames.map((game) => (
+    <GameCard
+      key={game.id}
+      title={game.name}
+      description={game.description}
+      hoverText={game.hoverText}
+      buttonText={game.buttonText}
+      backgroundImage={game.background_image}
+    />
+  ))}
+</section>
+
           </>
         )}
       </div>
