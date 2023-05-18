@@ -36,6 +36,7 @@ function GameStore() {
       key={game.id}
       gameId={game.id}
       title={game.name}
+      genre={game.genre}
       description={game.description}
       hoverText={game.hoverText}
       buttonText={game.buttonText}
