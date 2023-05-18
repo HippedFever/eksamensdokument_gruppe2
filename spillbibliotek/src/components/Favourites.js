@@ -11,7 +11,7 @@ function Favourites() {
   return (
     <div>
       <h2>My Favourites</h2>
-      <section>
+      <section style={{ display: "grid", gridTemplateColumns: "1fr" }}>
         {favourites.slice(0, 2).map((game, index) => (
           <GameCard key={index} {...game} />
         ))}
