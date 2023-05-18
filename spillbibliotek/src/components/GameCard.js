@@ -1,9 +1,12 @@
+// GameCard.js
 import React from "react";
+import { Link } from "react-router-dom";
 import BuyButton from "./BuyButton";
 import Heart from "./Heart";
 
 
 function GameCard({ title, description, hoverText, backgroundImage, gameId, onBuyButtonClick }) {
+
   const handleHeartClick = (event) => {
     event.stopPropagation();
   };
@@ -15,16 +18,19 @@ function GameCard({ title, description, hoverText, backgroundImage, gameId, onBu
   };
 
   return (
-    <article className="card">
-      <Heart onClick={handleHeartClick} />
-      <div className="pic" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
-      <div className="content">
-        <h2>{title}</h2>
-        <p>{description}</p>
-        <div className="hover-text">{hoverText}</div>
-        <BuyButton buttonText="BUY" onButtonClick={handleBuyButtonClick} />
-      </div>
-    </article>
+
+    <Link to={`/gameshop/games/${id}`} className="game-card-link">
+      <article className="card" onClick={handleButtonClick}>
+        <Heart onClick={handleHeartClick} />
+        <div className="pic" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
+        <div className="content">
+          <h2>{title}</h2>
+          <p>{description}</p>
+          <div className="hover-text">{hoverText}</div>
+          <BuyButton buttonText="BUY" onButtonClick={handleButtonClick} />
+        </div>
+      </article>
+    </Link>
   );
 }
 
