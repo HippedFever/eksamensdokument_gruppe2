@@ -135,12 +135,18 @@ nav a:hover::before {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   background: linear-gradient(90deg, #151516 0%, #1d2229 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: background-size 0.3s ease;
 }
 
-.card h2, .card p, .card span {
+.card h2,
+.card p,
+.card span {
   position: absolute;
   z-index: 99;
-  right: 120px;
+  left: 25px; /* Updated to align left */
   letter-spacing: 1px;
   transition: 0.2s ease;
   color: #FF8C42;
@@ -148,9 +154,10 @@ nav a:hover::before {
 }
 
 .card h2 {
-  font-size: 50px;
+  font-size: 1.5rem;
   font-weight: 700;
   bottom: 25px;
+  text-align: left; /* Updated to align left */
 }
 
 .card p {
@@ -158,7 +165,7 @@ nav a:hover::before {
   font-size: 12px;
   bottom: 30px;
   opacity: 0;
-  text-align: right;
+  text-align: left; /* Updated to align left */
 }
 
 .card span {
@@ -194,28 +201,20 @@ nav a:hover::before {
   transition: 0.3s ease;
 }
 
-.card2 .pic {
-  background-image: url(#);
-  transition: 0.3s ease;
-}
-
-.card2 button {
-  background-color: #26c3a1;
-}
-
 .card:hover button {
-  transform: scale(16.5);
+  transform: scale(5);
   opacity: 0.5;
 }
 
 .card:hover h2 {
-  bottom: 400px;
-  right: 400px;
+  text-align: left; /* Updated to align left */
+  bottom: 25px;
+  left: 25px; /* Updated to align left */
 }
 
 .card:hover p {
   opacity: 1;
-  right: 60px;
+  left: 25px; /* Updated to align left */
 }
 
 .card:hover span {
@@ -224,8 +223,12 @@ nav a:hover::before {
 }
 
 .card:hover .pic {
-  filter: grayscale(1);
-  width: 470px;
+  width: 450px;
+  background-size: 125%;
+}
+
+.card:hover {
+  background-size: 125%; /* Zoom in by 25% when hovered */
 }
 
 /*# sourceMappingURL=main.css.map */
