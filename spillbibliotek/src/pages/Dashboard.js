@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Library from "../components/Library";
 import Favourites from "../components/Favourites";
 import GameShopComp from "../components/GameShopFront";
-// import Cart from "../components/Cart";
+
 
 function Dashboard() {
   return (
