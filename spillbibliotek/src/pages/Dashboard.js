@@ -10,14 +10,16 @@ function Dashboard() {
   return (
     <div>
       <Header />
-      <main style={{ display: "grid", gridTemplateColumns: "1fr", padding: "20px", }}>
+      <main style={{ display: "grid", gridTemplateColumns: "1fr" }}>
         <section>
           <GameShopComp />
         </section>
         <section>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
             <Library />
-            <Favourites />
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr" }}>
+          <Favourites />
           </div>
         </section>
       </main>
