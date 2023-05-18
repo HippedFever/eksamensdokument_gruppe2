@@ -49,7 +49,7 @@ function GameShop() {
           onChange={(event) => setSearchGame(event.target.value)}
         />
         {isLoading ? (
-          <p>Loading...</p>
+          <p>Loading</p>
         ) : (
           <>
             {searchGame ? (
