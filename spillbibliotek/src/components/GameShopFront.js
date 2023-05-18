@@ -4,15 +4,12 @@ import { Link } from "react-router-dom";
 
 function GameStore() {
   const [games, setGames] = useState([]);
-  const [searchGame, setSearchGame] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchGames() {
       try {
-        const url = searchGame
-          ? `https://api.rawg.io/api/games?key=27e0f70c258642ebab90d7b2680c5c4b&search=${searchGame}`
-          : `https://api.rawg.io/api/games?key=27e0f70c258642ebab90d7b2680c5c4b&dates=2023-01-01,2023-12-31&metacritic=70,100&ordering=-metacritic&page_size=10`;
+        const url = `https://api.rawg.io/api/games?key=27e0f70c258642ebab90d7b2680c5c4b&dates=2023-01-01,2023-12-31&metacritic=70,100&ordering=-metacritic&page_size=5`;
 
         const response = await fetch(url);
         const data = await response.json();
@@ -24,24 +21,15 @@ function GameStore() {
     }
 
     fetchGames();
-  }, [searchGame]);
-
-  const filteredGames = games.filter((game) =>
-    game.name.toLowerCase().includes(searchGame.toLowerCase())
-  );
+  }, []);
 
   return (
     <div>
-      <h2>
-        Game Shop - Top Games Right Now! -
-        <Link to="/gameshop" className="btn">
-          Go to Game Shop
-        </Link>
-      </h2>
+      <h2>Game Shop - Top Games Right Now!</h2>
       <section>
-        {filteredGames.slice(0, 3).map((game, index) => (
+        {games.map((game) => (
           <GameCard
-            key={index}
+            key={game.id}
             title={game.name}
             description={game.description}
             hoverText={game.hoverText}
@@ -50,6 +38,9 @@ function GameStore() {
           />
         ))}
       </section>
+      <Link to="/gameshop" className="btn">
+        Go to Game Shop
+      </Link>
     </div>
   );
 }
