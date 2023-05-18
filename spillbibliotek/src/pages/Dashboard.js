@@ -10,9 +10,15 @@ function Dashboard() {
   return (
     <main>
       <Header />
-      <GameShopComp />
-      <Library />
-      <Favourites />
+      <section>
+        <GameShopComp />
+      </section>
+      <section>
+        <Library />
+      </section>
+      <section>
+        <Favourites />
+      </section>
       <Footer />
     </main>
   );

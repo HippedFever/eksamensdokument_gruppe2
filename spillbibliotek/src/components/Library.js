@@ -11,7 +11,7 @@ function Library() {
   return (
     <div>
       <h2>My Games</h2>
-      <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}>
+      <div>
         {games.map((game, index) => (
           <GameCard key={index} title={game.title} platform={game.platform} />
         ))}

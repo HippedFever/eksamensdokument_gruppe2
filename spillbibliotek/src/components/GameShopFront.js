@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import GameCard from "./GameCard";
 
@@ -27,9 +28,9 @@ const games = [
 
 function GameStore() {
   return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+    <div>
       <h2>Game Shop</h2>
-      <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
+      <div>
         {games.map((game, index) => (
           <GameCard
             key={index}
