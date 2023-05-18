@@ -4,18 +4,21 @@ import { Link } from "react-router-dom";
 import BuyButton from "./BuyButton";
 import Heart from "./Heart";
 
-function GameCard({ id, title, description, hoverText, backgroundImage, onButtonClick }) {
+
+function GameCard({ title, description, hoverText, backgroundImage, gameId, onBuyButtonClick }) {
+
   const handleHeartClick = (event) => {
     event.stopPropagation();
   };
 
-  const handleButtonClick = () => {
-    if (typeof onButtonClick === "function") {
-      onButtonClick();
+  const handleBuyButtonClick = () => {
+    if (typeof onBuyButtonClick === "function") {
+      onBuyButtonClick(gameId);
     }
   };
 
   return (
+
     <Link to={`/gameshop/games/${id}`} className="game-card-link">
       <article className="card" onClick={handleButtonClick}>
         <Heart onClick={handleHeartClick} />

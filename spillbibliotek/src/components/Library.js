@@ -1,18 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import GameCard from "../components/GameCard";
 import { Link } from "react-router-dom";
+import PurchasedGames from "./purchasedGames";
 
 function Library() {
-  const games = [
-    { title: "Game 1", description: "Description 1", hoverText: "Hover text 1", backgroundImage: "url-to-image-1", platform: "PC" },
-    { title: "Game 2", description: "Description 2", hoverText: "Hover text 2", backgroundImage: "url-to-image-2", platform: "PlayStation" },
-    { title: "Game 3", description: "Description 3", hoverText: "Hover text 3", backgroundImage: "url-to-image-3", platform: "Xbox" },
-    { title: "Game 4", description: "Description 4", hoverText: "Hover text 4", backgroundImage: "url-to-image-4", platform: "Xbox" },
-  ];
+  const [games, setGames] = useState([]);
 
   const handleButtonClick = (title) => {
     console.log(`Clicked on ${title}`);
   };
+
+  useEffect(() => {
+    const fetchGameDetails = async () => {
+      const gamePromises = PurchasedGames.map(async (gameId) => {
+        const response = await fetch(`https://api.rawg.io/api/games/${gameId}?key=27e0f70c258642ebab90d7b2680c5c4b`);
+        const data = await response.json();
+        return data;
+      });
+
+      const gameData = await Promise.all(gamePromises);
+      setGames(gameData);
+    };
+
+    fetchGameDetails();
+  }, []);
 
   return (
     <div>
@@ -21,11 +32,10 @@ function Library() {
         {games.map((game, index) => (
           <GameCard
             key={index}
-            title={game.title}
-            description={game.description}
+            title={game.name}
             hoverText={game.hoverText}
-            backgroundImage={game.backgroundImage}
-            onButtonClick={() => handleButtonClick(game.title)}
+            backgroundImage={game.background_image}
+            onButtonClick={() => handleButtonClick(game.name)}
           />
         ))}
       </section>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import GameCard from "../components/GameCard";
+import PurchasedGames from "../components/purchasedGames";
 
 function GameShop() {
   const [games, setGames] = useState([]);
@@ -30,6 +31,11 @@ function GameShop() {
     game.name.toLowerCase().includes(searchGame.toLowerCase())
   );
 
+  const handleBuyButtonClick = (gameId) => {
+    PurchasedGames.push(gameId);
+    console.log(PurchasedGames);
+  };
+
   return (
     <main>
       <Header />
@@ -48,15 +54,18 @@ function GameShop() {
             <h2>{searchGame ? "Search Results" : "Popular Games"}</h2>
             <section style={{ display: "flex", flexWrap: "wrap" }}>
             {filteredGames.map((game) => {
-  console.log(game); // Lager en konsolllog for hvert spill rendret 
+  console.log(game); // Lager en konsoll log for hvert spill rendret 
   return (
+    
     <GameCard
       key={game.id}
+      gameId={game.id}
       title={game.name}
       description={game.description}
       hoverText={game.hoverText}
       buttonText={game.buttonText}
       backgroundImage={game.background_image}
+      onBuyButtonClick={handleBuyButtonClick}
     />
   );
 })}
