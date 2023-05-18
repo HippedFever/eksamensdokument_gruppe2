@@ -7,9 +7,6 @@ $white: #FFFFFF;
 $grey: #CCCCCC;
 $black: #222222;
 
-
-
-
 html {
   position: relative;
   min-height: 100%;
@@ -22,15 +19,14 @@ body {
   flex-direction: column;
 }
 
-main {
+.main {
   background: $grey;
   flex: 1;
   border-radius: 20px;
   height: 100%;
 }
 
-
-footer {
+.footer {
   background: linear-gradient(90deg, #151516 0%, #1d2229 100%);
   text-align: center;
   color: $white;
@@ -40,15 +36,15 @@ footer {
   border-radius: 0 0 20px 20px;
 }
 
-footer a:visited {
+.footer a:visited {
   color: $white;
 }
 
-footer a:hover {
+.footer a:hover {
   background-color: $lightblue;
   padding: .25rem;
   border-radius: 5px;
-  color: black;
+  color: $black;
 }
 
 .header-title {
@@ -62,25 +58,25 @@ footer a:hover {
 }
 
 nav {
-background: linear-gradient(90deg, #151516 0%, #1d2229 100%);
-border-radius: 20px 20px 0 0;
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-bottom: 3rem;
+  background: linear-gradient(90deg, #151516 0%, #1d2229 100%);
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
 }
 
 nav ul {
-list-style: none;
-display: flex;
-gap: 1rem;
-margin-right: 1rem;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-right: 1rem;
 }
 
 nav li {
-margin: 0;
-height: 100%;
-display: flex;
+  margin: 0;
+  height: 100%;
+  display: flex;
 }
 
 nav a {
@@ -116,22 +112,6 @@ nav a:hover::before {
 }
 
 .container {
-display: flex;
-flex-wrap: wrap;
-}
-
-.MyGames {
-flex: 2;
-padding: 1rem;
-}
-
-.MyFavourites {
-flex: 1;
-padding: 1rem;
-}
-
-
-.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,26 +131,41 @@ padding: 1rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
-  transition: background-size 0.3s ease;
+  transition: background-size 0.5s ease;
+}
+
+.card .heart-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  fill: $orange;
+  cursor: pointer;
 }
 
 .card h2,
 .card p,
 .card span {
   position: absolute;
-  z-index: 99;
-  left: 25px; /* Updated to align left */
-  letter-spacing: 1px;
-  transition: 0.2s ease;
+  max-width: 50%;
+  left: 20px;
+  transition: 0.5s ease;
   color: $orange;
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .card h2 {
   font-size: 1.5rem;
-  font-weight: 700;
-  bottom: 25px;
-  text-align: left; /* Updated to align left */
+  position: absolute;
+  top: 0px;
+  left: 25px;
+  color: $orange;
+  text-shadow:
+    -1px -1px 0 $black,
+    1px -1px 0 $black,
+    -1px 1px 0 $black,
+    1px 1px 0 $black;
 }
 
 .card p {
@@ -178,7 +173,7 @@ padding: 1rem;
   font-size: 12px;
   bottom: 30px;
   opacity: 0;
-  text-align: left; /* Updated to align left */
+  text-align: left;
 }
 
 .card span {
@@ -190,44 +185,42 @@ padding: 1rem;
 }
 
 .card .pic {
-  z-index: 100;
-  width: 300px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
   border-radius: 12px;
   background-size: cover;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
   background-image: url(#);
 }
 
 .card button {
   position: absolute;
-  right: 30px;
-  bottom: 40px;
+  left: 15px;
+  top: 15px;
   width: 30px;
   height: 30px;
-  background-color: $purple;
+  background-color: transparent;
   border: none;
-  border-radius: 30px;
   cursor: pointer;
   outline: none;
   opacity: 1;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
+}
+
+.card button::before {
+  content: '\2764';
+  font-size: 24px;
+  color: $orange;
 }
 
 .card:hover button {
-  transform: scale(5);
-  opacity: 0.5;
-}
-
-.card:hover h2 {
-  text-align: left; /* Updated to align left */
-  bottom: 25px;
-  left: 25px; /* Updated to align left */
+  transform: scale(1.2);
+  opacity: 0.8;
 }
 
 .card:hover p {
   opacity: 1;
-  left: 25px; /* Updated to align left */
+  left: 25px;
 }
 
 .card:hover span {
@@ -236,10 +229,8 @@ padding: 1rem;
 }
 
 .card:hover .pic {
-  width: 450px;
-  background-size: 125%;
-}
-
-.card:hover {
-  background-size: 125%; /* Zoom in by 25% when hovered */
+  width: auto;
+  background-position: center;
+  background-size: 150%;
+  transition: 0.5s ease;
 }

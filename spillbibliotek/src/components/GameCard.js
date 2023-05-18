@@ -1,14 +1,21 @@
 import React from "react";
+import BuyButton from "./BuyButton";
+import Heart from "./Heart";
 
-function GameCard({ title, description, hoverText, buttonText, backgroundImage }) {
+function GameCard({ title, description, hoverText, backgroundImage, onButtonClick }) {
+  const handleHeartClick = (event) => {
+    event.stopPropagation();
+  };
 
   const handleButtonClick = () => {
-    // Add your logic here for handling the button click
-    console.log("Button clicked");
+    if (typeof onButtonClick === "function") {
+      onButtonClick();
+    }
   };
 
   return (
-    <article className="card">
+    <article className="card" onClick={handleButtonClick}>
+      <Heart onClick={handleHeartClick} />
       <div className="image-container">
         <div className="pic" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
       </div>
@@ -16,7 +23,7 @@ function GameCard({ title, description, hoverText, buttonText, backgroundImage }
         <h2>{title}</h2>
         <p>{description}</p>
         <div className="hover-text">{hoverText}</div>
-        <button onClick={handleButtonClick}>{buttonText}</button>
+        <BuyButton buttonText="BUY" onButtonClick={handleButtonClick} />
       </div>
     </article>
   );

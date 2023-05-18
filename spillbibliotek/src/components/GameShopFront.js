@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import GameCard from "./GameCard";
+import { Link } from "react-router-dom";
+
 import GameCard from "../components/GameCard";
 
 
@@ -21,39 +24,28 @@ function GameStore() {
     fetchGames();
   }, []);
 
-    return (
-      <main>
-        <div>
-          {isLoading ? (
-            <p>Loading</p>
-          ) : (
-            <>
-              <h2>Top Rated Games of 2023</h2>
-              <section
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  flexWrap: "wrap",
-                  justifyContent: "center",
-                }}
-              >
-                {games.map((game) => (
-                  <GameCard
-                    key={game.id}
-                    title={game.name}
-                    description={game.description}
-                    hoverText={game.hoverText}
-                    buttonText={game.buttonText}
-                    backgroundImage={game.background_image}
-                  />
-                ))}
-              </section>
-            </>
-          )}
-        </div>
-      </main>
-    );
-  }
+ 
+  return (
+    <div>
+      <h2>Game Shop - Top Games Right Now!</h2>
+      <Link to="/gameshop" className="btn">
+        Go to Game Shop
+      </Link>
+      <section style={{ display: "flex", flexDirection: "row" }}>
+  {games.slice(0, 3).map((game) => (
+    <GameCard
+      key={game.id}
+      title={game.name}
+      description={game.description}
+      hoverText={game.hoverText}
+      buttonText={game.buttonText}
+      backgroundImage={game.background_image}
+    />
+  ))}
+</section>
+    </div>
+  );
+}
 
 
 export default GameStore;
