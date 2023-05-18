@@ -16,9 +16,7 @@ function GameCard({ title, description, hoverText, backgroundImage, onButtonClic
   return (
     <article className="card" onClick={handleButtonClick}>
       <Heart onClick={handleHeartClick} />
-      <div className="image-container">
         <div className="pic" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
-      </div>
       <div className="content">
         <h2>{title}</h2>
         <p>{description}</p>
