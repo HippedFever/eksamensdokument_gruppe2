@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import GameCard from "../components/GameCard";
-import { Link } from "react-router-dom";
 import PurchasedGames from "./purchasedGames";
 import FavoritedGames from "./favoritedGames";
 
