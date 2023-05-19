@@ -9,7 +9,7 @@ rochlenge = Christian De Rochlenge Kandidatnr: 193245
 
 
 ## Vanskelighetsgrad
-Vi har gått for karakteren C. \
+Vi har gått for karakteren C. 
 
 ## Kilder & Inspirasjon:
 
