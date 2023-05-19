@@ -43,7 +43,7 @@ function GameStore() {
  
   return (
     <div>
-      <h2>Game Shop - Top Games Right Now!</h2>
+      <h2>Game Shop - Top Games in 2023 !</h2>
 
       <section style={{ display: "flex", flexDirection: "row" }}>
   {games.map((game) => (
