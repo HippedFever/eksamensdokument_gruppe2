@@ -3,7 +3,7 @@
 ## Github Navn for personene
 HippedFever = Mats Christensen Kandidatnr: 202134 \
 tryggveh = Tryggve Hatteland Kandidatnr: 203322 \
-rochlenge = Christian De Rochlenge Kandidatnr: 193245 \
+rochlenge = Christian De Rochlenge Kandidatnr: 193245 
 
 ## Kilder & Inspirasjon:
 
