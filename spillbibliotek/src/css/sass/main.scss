@@ -22,8 +22,29 @@ body {
 main {
   background: $grey;
   flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
   height: 100%;
   padding: 20px;
+}
+
+.dashboard {
+  display: grid;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.library-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.favourites-section {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 footer {
