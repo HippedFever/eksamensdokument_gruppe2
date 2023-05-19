@@ -22,7 +22,7 @@ function GameCard({ title, genres, description, hoverText, backgroundImage, game
       <article className="card" onClick={handleButtonClick}>
         <Heart onClick={handleHeartClick} />
         <div className="pic" style={{ backgroundImage: `url(${backgroundImage})` }}>          <Link to={`/gameshop/games/${gameId}`} className="game-card-link">
-          <button onClick={handleButtonClick} className="readButton">Read More!</button>
+          <button onClick={handleButtonClick} className="readButton">Read more!</button>
           </Link></div>
         <div className="content">
           <h2>{title}</h2>
