@@ -11,6 +11,10 @@ rochlenge = Christian De Rochlenge Kandidatnr: 193245
 ## Vanskelighetsgrad
 Vi har gått for karakteren C. 
 
+## Ting vi ikke har fått tid til
+Vi slet med å få sidene til å oppdatere seg når man legger inn nye spill i favoritt og kjøps arrayene. Derfor må man gå inn på en ny side og tilbake igjen for at det skal bli rendret.
+
+
 ## Kilder & Inspirasjon:
 
 1. https://rawg.io/apidocs#why-rawg-api
