@@ -17,5 +17,5 @@ rochlenge = Christian De Rochlenge Kandidatnr: 193245
 8. https://react.dev/
 
 
-Ann Charlott Karlsen, Forelesningsnotater, Utvikling av interaktive nettsteder 2023
+Ann Charlott Karlsen, Forelesningsnotater, Utvikling av interaktive nettsteder 2023 \
 Tore Marius Akerbæk, Forelesningsnotater, Utvikling av interaktive nettsteder 2023
