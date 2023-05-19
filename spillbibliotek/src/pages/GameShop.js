@@ -41,9 +41,9 @@ function GameShop() {
   };
 
   return (
-    <main>
+    <div>
       <Header />
-      <div>
+      <main>
         <input
           className="searchBar"
           type="text"
@@ -77,9 +77,9 @@ function GameShop() {
 
           </>
         )}
-      </div>
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 }
 

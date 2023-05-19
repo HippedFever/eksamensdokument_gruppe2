@@ -8,21 +8,19 @@ import GameShopComp from "../components/GameShopFront";
 
 function Dashboard() {
   return (
-    <div>
+    <span className="dashboard">
       <Header />
-      <main style={{ display: "grid", gridTemplateColumns: "1fr", padding: "20px", }}>
-        <section>
+      <main className="main">
+        <section className="section">
           <GameShopComp />
         </section>
-        <section>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
-            <Library />
-            <Favourites />
-          </div>
+        <section className="section">
+            <Library className="library-section" />
+            <Favourites className="favourites-section" />
         </section>
       </main>
       <Footer />
-    </div>
+    </span>
   );
 }
 

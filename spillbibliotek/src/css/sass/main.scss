@@ -22,8 +22,29 @@ body {
 main {
   background: $grey;
   flex: 1;
-  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
   height: 100%;
+  padding: 20px;
+}
+
+.dashboard {
+  display: grid;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.library-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.favourites-section {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 footer {
@@ -114,6 +135,17 @@ nav a:hover::before {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.searchBar {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  border-radius: 20px;
+  height: 2rem;
+  width: 50%;
 }
 
 .card {
