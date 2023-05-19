@@ -16,5 +16,3 @@ rochlenge = Christian De Rochlenge Kandidatnr:
 7. https://codeburst.io/make-a-video-game-search-app-with-rawg-api-react-router-fetch-and-hooks-6b76e2bf83a2
 8. https://react.dev/
 
-
-
