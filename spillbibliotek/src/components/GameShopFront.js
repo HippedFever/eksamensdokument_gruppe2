@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import GameCard from "./GameCard";
 import { Link } from "react-router-dom";
 import PurchasedGames from "../components/purchasedGames";
+import FavoritedGames from "./favoritedGames";
 
 
 
@@ -33,6 +34,12 @@ function GameStore() {
     }
   };
 
+  const handleHeartClick = (gameId) => {
+    FavoritedGames.push(gameId);
+    console.log(FavoritedGames);
+  };
+
+
  
   return (
     <div>
@@ -52,6 +59,7 @@ function GameStore() {
       buttonText={game.buttonText}
       backgroundImage={game.background_image}
       onBuyButtonClick={handleBuyButtonClick}
+      onHeartClick={handleHeartClick}
     />
   ))}
 </section>

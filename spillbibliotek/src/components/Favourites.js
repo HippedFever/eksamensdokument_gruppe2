@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import GameCard from "../components/GameCard";
-import PurchasedGames from "../components/purchasedGames";
+import PurchasedGames from "./purchasedGames";
 import FavoritedGames from "./favoritedGames";
 
 
