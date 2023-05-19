@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import GameCard from "./GameCard";
 import { Link } from "react-router-dom";
 import PurchasedGames from "../components/purchasedGames";
+import FavoritedGames from "./favoritedGames";
 
 
 
@@ -33,13 +34,17 @@ function GameStore() {
     }
   };
 
+  const handleHeartClick = (gameId) => {
+    FavoritedGames.push(gameId);
+    console.log(FavoritedGames);
+  };
+
+
  
   return (
     <div>
       <h2>Game Shop - Top Games Right Now!</h2>
-      <Link to="/gameshop" className="btn">
-        Go to Game Shop
-      </Link>
+
       <section style={{ display: "flex", flexDirection: "row" }}>
   {games.map((game) => (
     <GameCard
@@ -52,6 +57,7 @@ function GameStore() {
       buttonText={game.buttonText}
       backgroundImage={game.background_image}
       onBuyButtonClick={handleBuyButtonClick}
+      onHeartClick={handleHeartClick}
     />
   ))}
 </section>
