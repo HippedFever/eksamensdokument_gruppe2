@@ -23,9 +23,8 @@ function GameCard({ title, backgroundImage, gameId, onBuyButtonClick, onHeartCli
         <div className="pic" style={{ backgroundImage: `url(${backgroundImage})` }}>
           
           <Link to={`/gameshop/games/${gameId}`} className="game-card-link">
-          <button className="readButton">Read More!</button>
+          <button className="readButton">Read more!</button>
           </Link>
-          
         </div>
         <div className="content">
           <h2>{title}</h2>
