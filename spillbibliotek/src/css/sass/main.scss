@@ -170,29 +170,16 @@ nav a:hover::before {
   width: 36px;
   height: 36px;
   cursor: pointer;
-  font-size: 2rem;
-  padding-top: 1rem;
-  padding-left: 15rem;
-}
-
-@keyframes pulsate {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-right: 14rem;
+  opacity: 0%;
 }
 
 .card:hover .heart-icon {
-  opacity: 1;
-  top: 10px;
-  right: 10px;
-  width: 36px;
-  height: 36px;
+  opacity: 100%;
+  margin-left: 13rem;
+  margin-top: 2rem;
   text-shadow:
     -1px -1px 0 $black,
     1px -1px 0 $black,
@@ -262,13 +249,23 @@ nav a:hover::before {
 
 .card:hover h2 {
   opacity: 1;
-  text-shadow:
-    0 0 8px $purple,
-    0 0 10px $purple,
-    0 0 12px $purple,
-    0 0 14px $purple,
-    0 0 16px $purple;
-  transition: text-shadow 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.card .buyButton::before {
+  content: '\1F6D2';
+  font-size: 24px;
+  color: $orange;
+}
+
+
+.card:hover .buyButton {
+  transform: scale(1.2);
+}
+
+.card:hover p {
+  opacity: 1;
+  left: 25px;
 }
 
 .card:hover span {
@@ -281,6 +278,27 @@ nav a:hover::before {
   background-position: center;
   background-size: 125%;
   transition: 0.5s ease;
+}
+
+.buyButton {
+  padding-left: 16.5rem;
+  color: $orange;
+  text-shadow:
+  -1px -1px 0 $black,
+  1px -1px 0 $black,
+  -1px 1px 0 $black,
+  1px 1px 0 $black;
+}
+
+.card:hover .buyButton {
+  padding-left: 14.5rem;
+  padding-top: 5rem;
+  color: $orange;
+  text-shadow:
+  -1px -1px 0 $black,
+  1px -1px 0 $black,
+  -1px 1px 0 $black,
+  1px 1px 0 $black;
 }
 
 .card .readButton {

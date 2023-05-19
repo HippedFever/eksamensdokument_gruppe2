@@ -6,11 +6,10 @@ import Heart from "./Heart";
 
 function GameCard({ title, backgroundImage, gameId, onBuyButtonClick, onHeartClick }) {
 
-  const handleButtonClick = () => {
-    if (typeof onBuyButtonClick === "function") {
+  const handleButtonClick = (buttonType) => {
+    if (buttonType === "buy" && typeof onBuyButtonClick === "function") {
       onBuyButtonClick(gameId);
-    }
-    if (typeof onHeartClick === "function") {
+    } else if (buttonType === "heart" && typeof onHeartClick === "function") {
       onHeartClick(gameId);
     }
   };
@@ -19,7 +18,7 @@ function GameCard({ title, backgroundImage, gameId, onBuyButtonClick, onHeartCli
 
   return (
       <article className="card" >
-        <Heart gameId={gameId} onClick={handleButtonClick} />
+        <Heart gameId={gameId} onClick={() => handleButtonClick("heart")} />
         <div className="pic" style={{ backgroundImage: `url(${backgroundImage})` }}>
           <Link to={`/gameshop/games/${gameId}`} className="game-card-link">
           <button className="readButton">Read more!</button>
@@ -27,7 +26,7 @@ function GameCard({ title, backgroundImage, gameId, onBuyButtonClick, onHeartCli
         </div>
         <div>
           <h2>{title}</h2>
-          <BuyButton buttonText="BUY" onButtonClick={handleButtonClick} />
+          <BuyButton buttonText="BUY" onButtonClick={() => handleButtonClick("buy")} />
         </div>
       </article>
   );

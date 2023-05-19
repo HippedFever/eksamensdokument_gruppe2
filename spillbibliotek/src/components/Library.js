@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import GameCard from "../components/GameCard";
-import { Link } from "react-router-dom";
 import PurchasedGames from "./purchasedGames";
+import FavoritedGames from "./favoritedGames";
 
 function Library() {
   const [games, setGames] = useState([]);
@@ -14,6 +14,12 @@ function Library() {
       console.log("This game is already in your library.");
     }
   };
+
+  const handleHeartClick = (gameId) => {
+    FavoritedGames.push(gameId);
+    console.log(FavoritedGames);
+  };
+
 
   useEffect(() => {
     const fetchGameDetails = async () => {
@@ -42,12 +48,10 @@ function Library() {
             hoverText={game.hoverText}
             backgroundImage={game.background_image}
             onBuyButtonClick={handleBuyButtonClick}
+            onHeartClick={handleHeartClick}
           />
         ))}
       </section>
-      <Link to="/mygames" className="btn">
-        Go to My Games
-      </Link>
     </div>
   );
 }

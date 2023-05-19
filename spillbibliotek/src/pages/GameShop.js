@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import GameCard from "../components/GameCard";
 import PurchasedGames from "../components/purchasedGames";
+import FavoritedGames from "../components/favoritedGames";
 
 function GameShop() {
   const [games, setGames] = useState([]);
@@ -40,6 +41,11 @@ function GameShop() {
     }
   };
 
+  const handleHeartClick = (gameId) => {
+    FavoritedGames.push(gameId);
+    console.log(FavoritedGames);
+  };
+
   return (
     <div>
       <Header />
@@ -70,6 +76,7 @@ function GameShop() {
       buttonText={game.buttonText}
       backgroundImage={game.background_image}
       onBuyButtonClick={handleBuyButtonClick}
+      onHeartClick={handleHeartClick}
     />
   );
 })}

@@ -1,2 +1,2 @@
-const PurchasedGames = [327239];
+const PurchasedGames = [713573, 296017];
 export default PurchasedGames;
