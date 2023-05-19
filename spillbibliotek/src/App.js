@@ -1,41 +1,23 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Dashboard from './components/Dashboard';
-import GameShop from './components/GameShop';
-import MyGames from './components/MyGames';
-import MyFavourites from './components/MyFavourites';
-import './App.css';
+// App.js
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import GameShop from "./pages/GameShop";
+import MyGames from "./pages/MyGames";
+import MyFavourites from "./pages/MyFavourites";
+import GamePage from "./pages/GamePage";
+import "./css/main.css";
 
 function App() {
   return (
     <Router>
-      <div>
-        {/* Menyen */}
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Dashboard</Link>
-            </li>
-            <li>
-              <Link to="/gameshop">Game Shop</Link>
-            </li>
-            <li>
-              <Link to="/mygames">My Games</Link>
-            </li>
-            <li>
-              <Link to="/myfavourites">My Favourites</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* Routing */}
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/gameshop" element={<GameShop />} />
-          <Route path="/mygames" element={<MyGames />} />
-          <Route path="/myfavourites" element={<MyFavourites />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/gameshop" element={<GameShop />} />
+        <Route path="/gameshop/games/:gameId" element={<GamePage />} />
+        <Route path="/mygames" element={<MyGames />} />
+        <Route path="/myfavourites" element={<MyFavourites />} />
+      </Routes>
     </Router>
   );
 }

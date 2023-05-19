@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import MyFavourites from "./MyFavourites";
 
-function Dashboard() {
+function Navbar() {
+
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <p>Vennligst velg en av følgende:</p>
+    <nav>
+      <Link to="/">
+        <h1 className="header-title">The Game Vault</h1>
+      </Link>
       <ul>
         <li>
           <Link to="/gameshop">Visit Shop</Link>
@@ -18,10 +19,8 @@ function Dashboard() {
           <Link to="/myfavourites">Go to favorites</Link>
         </li>
       </ul>
-
-      <MyFavourites />
-    </div>
+    </nav>
   );
 }
 
-export default Dashboard;
+export default Navbar;
