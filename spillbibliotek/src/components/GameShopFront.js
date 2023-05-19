@@ -44,9 +44,7 @@ function GameStore() {
   return (
     <div>
       <h2>Game Shop - Top Games Right Now!</h2>
-      <Link to="/gameshop" className="btn">
-        Go to Game Shop
-      </Link>
+
       <section style={{ display: "flex", flexDirection: "row" }}>
   {games.map((game) => (
     <GameCard

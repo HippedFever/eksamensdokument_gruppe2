@@ -53,9 +53,6 @@ function Library() {
           />
         ))}
       </section>
-      <Link to="/mygames" className="btn">
-        Go to My Games
-      </Link>
     </div>
   );
 }
