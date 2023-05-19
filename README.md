@@ -1,9 +1,15 @@
+# Eksamensdokumen 
+
 # Spillnettside laget av gruppe 2
 
-## Github Navn for personene
+## Medlemmer
 HippedFever = Mats Christensen Kandidatnr: 202134 \
 tryggveh = Tryggve Hatteland Kandidatnr: 203322 \
 rochlenge = Christian De Rochlenge Kandidatnr: 193245 
+
+
+## Vanskelighetsgrad
+Vi har gått for karakteren C. \
 
 ## Kilder & Inspirasjon:
 
@@ -15,6 +21,8 @@ rochlenge = Christian De Rochlenge Kandidatnr: 193245
 6. https://rawgthedocs.orels.sh/api/
 7. https://codeburst.io/make-a-video-game-search-app-with-rawg-api-react-router-fetch-and-hooks-6b76e2bf83a2
 8. https://react.dev/
+9. https://webtricks.blog/start-et-prosjekt-med-react-sanity-og-sass-fra-scratch/
+10. https://react.dev/
 
 
 Ann Charlott Karlsen, Forelesningsnotater, Utvikling av interaktive nettsteder 2023 \
