@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 function BuyButton({ buttonText, onButtonClick }) {
-  const [games, setGames] = useState([]);
   const handleButtonClick = () => {
     onButtonClick();
   };
