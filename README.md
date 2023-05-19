@@ -1,4 +1,4 @@
-# Eksamensdokumen 
+# Eksamensdokument 
 
 # Spillnettside laget av gruppe 2
 
