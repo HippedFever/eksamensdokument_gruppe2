@@ -166,15 +166,15 @@ nav a:hover::before {
   fill: #FF8C42;
   cursor: pointer;
   font-size: 1.5rem;
-  padding-top: 0.5rem;
-  padding-left: 14rem;
+  margin-top: 0.5rem;
+  margin-right: 14rem;
   opacity: 0%;
 }
 
 .card:hover .heart-icon {
   opacity: 100%;
-  padding-left: 13rem;
-  padding-top: 2rem;
+  margin-left: 13rem;
+  margin-top: 2rem;
   text-shadow: -1px -1px 0 #222222, 1px -1px 0 #222222, -1px 1px 0 #222222, 1px 1px 0 #222222;
 }
 
@@ -283,44 +283,23 @@ nav a:hover::before {
   text-shadow: -1px -1px 0 #222222, 1px -1px 0 #222222, -1px 1px 0 #222222, 1px 1px 0 #222222;
 }
 
-.card:hover h2 {
-  font-size: 1rem;
-}
-
-.card .readButton {
-  opacity: 0%;
-  border-radius: 12px;
-  color: #FF8C42;
-  transition: opacity 0.3s ease;
-}
-
 .card .readButton {
   opacity: 0;
   margin-top: 7rem;
-  border-radius: 12px;
+  margin-left: -80%;
+  border-radius: 10px;
   color: #FF8C42;
-  transition: opacity 0.3s ease;
-  transform: translateX(-100%);
+  font-size: 0.5rem;
+  padding: 0.5rem;
+  transition: opacity 0.5s ease, margin-left 0.5s ease;
+  background: linear-gradient(90deg, #151516 0%, #1d2229 100%);
 }
 
 .card:hover .readButton {
-  margin-top: 7rem;
-  margin-left: 1rem;
-  transform: translateX(0);
+  margin-left: 0.2rem;
   opacity: 1;
-  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-@keyframes glideLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 .detailIMG {
   max-width: 100%;
   width: 100%;
