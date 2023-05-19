@@ -12,7 +12,7 @@ function Favourites() {
       PurchasedGames.push(gameId);
       console.log(PurchasedGames);
     } else {
-      console.log("This game is already in your library.");
+      console.log("Dette spillet er allerede i spillbiblioteket ditt.");
     }
   };
 
