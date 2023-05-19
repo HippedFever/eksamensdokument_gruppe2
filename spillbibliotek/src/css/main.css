@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 html {
   position: relative;
@@ -112,7 +111,7 @@ nav a::before {
   background-color: #6B3FA0;
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 nav a:hover {
@@ -153,17 +152,15 @@ nav a:hover::before {
   background: linear-gradient(90deg, #151516 0%, #1d2229 100%);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 125%;
   transition: background-size 0.5s ease;
 }
 
 .card .heart-icon {
-  position: absolute;
   top: 10px;
   right: 10px;
   width: 36px;
   height: 36px;
-  fill: #FF8C42;
   cursor: pointer;
   font-size: 1.5rem;
   margin-top: 0.5rem;
@@ -176,9 +173,9 @@ nav a:hover::before {
   margin-left: 13rem;
   margin-top: 2rem;
   text-shadow: -1px -1px 0 #222222, 1px -1px 0 #222222, -1px 1px 0 #222222, 1px 1px 0 #222222;
+  animation: pulsate 1s;
 }
 
-.card h2,
 .card p,
 .card span {
   position: absolute;
@@ -190,10 +187,15 @@ nav a:hover::before {
 }
 
 .card h2 {
-  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.4rem;
+  max-width: 50%;
+  max-height: 50%;
+  letter-spacing: 1px;
+  line-height: 1.2;
   position: absolute;
   top: 0px;
-  left: 25px;
+  left: 20px;
   color: #FF8C42;
   text-shadow: -1px -1px 0 #222222, 1px -1px 0 #222222, -1px 1px 0 #222222, 1px 1px 0 #222222;
 }
@@ -229,33 +231,10 @@ nav a:hover::before {
   background-image: url(#);
 }
 
-.card .buyButton {
-  position: absolute;
-  left: 15px;
-  top: 15px;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
+.card:hover h2 {
   opacity: 1;
-  transition: 0.5s ease;
-}
-
-.card .buyButton::before {
-  content: "🛒";
-  font-size: 24px;
-  color: #FF8C42;
-}
-
-.card:hover .buyButton {
-  transform: scale(1.2);
-}
-
-.card:hover p {
-  opacity: 1;
-  left: 25px;
+  text-shadow: 0 0 8px #6B3FA0, 0 0 10px #6B3FA0, 0 0 12px #6B3FA0, 0 0 14px #6B3FA0, 0 0 16px #6B3FA0;
+  transition: text-shadow 0.5s ease;
 }
 
 .card:hover span {
@@ -265,22 +244,9 @@ nav a:hover::before {
 
 .card:hover .pic {
   width: auto;
-  background-position: right;
+  background-position: center;
   background-size: 125%;
   transition: 0.5s ease;
-}
-
-.buyButton {
-  padding-left: 16.5rem;
-  color: #FF8C42;
-  text-shadow: -1px -1px 0 #222222, 1px -1px 0 #222222, -1px 1px 0 #222222, 1px 1px 0 #222222;
-}
-
-.card:hover .buyButton {
-  padding-left: 14.5rem;
-  padding-top: 5rem;
-  color: #FF8C42;
-  text-shadow: -1px -1px 0 #222222, 1px -1px 0 #222222, -1px 1px 0 #222222, 1px 1px 0 #222222;
 }
 
 .card .readButton {
@@ -290,6 +256,7 @@ nav a:hover::before {
   border-radius: 10px;
   color: #FF8C42;
   font-size: 0.5rem;
+  font-weight: bold;
   padding: 0.5rem;
   transition: opacity 0.5s ease, margin-left 0.5s ease;
   background: linear-gradient(90deg, #151516 0%, #1d2229 100%);
@@ -297,6 +264,31 @@ nav a:hover::before {
 
 .card:hover .readButton {
   margin-left: 0.2rem;
+  opacity: 1;
+}
+
+.card .buyButton {
+  position: absolute;
+  top: 120px;
+  right: -40px;
+  width: 36px;
+  height: 36px;
+  opacity: 1;
+  border-radius: 10px;
+  color: #FF8C42;
+  margin-left: 80%;
+  font-size: 0.5rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: opacity 0.5s ease, margin-right 0.5s ease;
+  background: linear-gradient(90deg, #151516 0%, #1d2229 100%);
+}
+
+.card:hover .buyButton {
+  position: absolute;
+  top: 120px;
+  right: 40px;
+  margin-right: 0.2rem;
   opacity: 1;
 }
 
