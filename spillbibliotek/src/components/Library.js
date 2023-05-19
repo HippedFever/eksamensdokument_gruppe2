@@ -6,8 +6,13 @@ import PurchasedGames from "./purchasedGames";
 function Library() {
   const [games, setGames] = useState([]);
 
-  const handleButtonClick = (title) => {
-    console.log(`Clicked on ${title}`);
+  const handleBuyButtonClick = (gameId) => {
+    if (!PurchasedGames.includes(gameId)) {
+      PurchasedGames.push(gameId);
+      console.log(PurchasedGames);
+    } else {
+      console.log("This game is already in your library.");
+    }
   };
 
   useEffect(() => {
@@ -36,7 +41,7 @@ function Library() {
             title={game.name}
             hoverText={game.hoverText}
             backgroundImage={game.background_image}
-            onButtonClick={() => handleButtonClick(game.name)}
+            onBuyButtonClick={handleBuyButtonClick}
           />
         ))}
       </section>

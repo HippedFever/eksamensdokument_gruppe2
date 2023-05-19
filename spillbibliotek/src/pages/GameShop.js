@@ -32,8 +32,12 @@ function GameShop() {
   );
 
   const handleBuyButtonClick = (gameId) => {
-    PurchasedGames.push(gameId);
-    console.log(PurchasedGames);
+    if (!PurchasedGames.includes(gameId)) {
+      PurchasedGames.push(gameId);
+      console.log(PurchasedGames);
+    } else {
+      console.log("This game is already in your library.");
+    }
   };
 
   return (

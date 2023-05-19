@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import GameCard from "./GameCard";
 import { Link } from "react-router-dom";
+import PurchasedGames from "../components/purchasedGames";
 
 
 
@@ -23,6 +24,15 @@ function GameStore() {
     fetchGames();
   }, []);
 
+  const handleBuyButtonClick = (gameId) => {
+    if (!PurchasedGames.includes(gameId)) {
+      PurchasedGames.push(gameId);
+      console.log(PurchasedGames);
+    } else {
+      console.log("This game is already in your library.");
+    }
+  };
+
  
   return (
     <div>
@@ -41,6 +51,7 @@ function GameStore() {
       hoverText={game.hoverText}
       buttonText={game.buttonText}
       backgroundImage={game.background_image}
+      onBuyButtonClick={handleBuyButtonClick}
     />
   ))}
 </section>
